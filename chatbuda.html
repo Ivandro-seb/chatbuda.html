@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual</title>
+    <style>
+        body {
+        font-size:18px;           
+        
+
+
+            background-image: linear-gradient(to right,#ff0018ff,#ff40b6ff);            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+        
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 8px 10px 15px black;
+            max-width: 400px;
+            width: 80%;
+        }
+        .input-box {
+            margin-bottom: 10px;
+            width:90%;
+        }
+        input[type="text"] {
+            width: 100%;
+            height:50%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        h2{
+        font-family:monospace;
+      color:#ff0018ff;
+      background-color:white;
+      text-align:center;   
+      border-radius:10px;       }
+        button:hover{
+          
+          background-color:#ff0018ff;
+          
+      }
+        button {
+        align-items:center;           
+        padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            width:110%; 
+             }
+        .response {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">
+    <div class="cantainer1">
+        <h2>Assistente Buda2.0</h2>
+        </div>
+        <div class="container">
+        <div class="input-box">
+            <input type="text" id="userInput" placeholder="Digite sua pergunta aqui..."><div id="response" class="response"></div>
+            <button onclick="responder()">Enviar</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function responder() {
+            const input = document.getElementById('userInput').value.toLowerCase();
+            const responseDiv = document.getElementById('response');
+
+            let resposta= "Estás a pensar vou falar não sei né?! vai pra o caralho";
+
+            if (input.includes("como você está")) {
+                resposta = "Estou bem, obrigado por perguntar!";
+               } if(input.includes("cona")){
+                resposta = "Tua mãe tem desenho né?!";
+             }            if(input.includes("estúpido")){
+                resposta = "Me inspiro no teu pai, não sabes!?";
+   }
+   if(input.includes("oi")){
+                resposta = "Tás bom cassule!?";
+   } 
+   if(input.includes("melhor programador")){
+                resposta = "Não sabes!? É o 'Pequeno Buda'";
+   }            if(input.includes("programação")){
+                resposta = "Pergunta no teu pai burro";
+              }
+              if(input.includes("pequeno buda")){
+                resposta = "Melhor programador do mundo ";
+              } else if (input.includes("chamas")) {
+                resposta = "Sou um assistente virtual criado em JavaScript. Pelo Pequeno Buda";
+            } else if (input.includes("o que você pode fazer")) {
+                resposta = "Posso responder a perguntas simples e mostrar funcionalidades básicas.";
+            }
+
+            responseDiv.textContent = resposta;
+        }
+    </script>
+</body>
+</html>
